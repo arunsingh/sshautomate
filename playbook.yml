@@ -1,0 +1,19 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: yes
+  vars:
+    action: present
+#    action: absent
+  tasks:
+  - name: Create user Developer
+    user: name=developer shell=/bin/bash
+
+  - name: Create dir for SSH Keys
+    file: path=/home/developer/.ssh state=directory mode=0700
+
+  - name: Copy the ssh key to Developer user on the servers
+    authorized_key: user=developer key="{{ item }}" state="{{ action }}"
+    with_file:
+      - developer.pub
+
