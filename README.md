@@ -20,7 +20,8 @@ This creates 2 centos virtual instances (Instance1 :192.168.33.33 and Instance2:
 and runs the playbook which creates user "developer"in the instances and copy a SSH public key generated for user "developer"
 
 
-To test,
+To test:
+
    ssh -i developer-id_rsa developer@192.168.33.33  
    ssh -i developer-id_rsa developer@192.168.33.34
 
@@ -42,5 +43,6 @@ To test,
   # action: present
     action: absent
 
-    run playbook again - ansible-playbook --private-key=/<PATH_TO_HOMEDIR>/.vagrant.d/insecure_private_key  playbook.yml
+    run playbook again -
+    ansible-playbook --private-key=/<PATH_TO_HOMEDIR>/.vagrant.d/insecure_private_key  playbook.yml
 
