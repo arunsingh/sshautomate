@@ -39,9 +39,10 @@ To test:
 
  1b.  Edit the playbook.yml and comment-out/comment-back the appropriate action within vars:
 
-  vars:
-  # action: present
-    action: absent
+  vars: 
+  
+    # action: present
+      action: absent
 
     run playbook again -
     ansible-playbook --private-key=/<PATH_TO_HOMEDIR>/.vagrant.d/insecure_private_key  playbook.yml
