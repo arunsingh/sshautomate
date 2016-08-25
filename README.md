@@ -32,8 +32,8 @@ To test:
 
  1a. Run the ansible playbook again with "action" provided as extra_vars.
 
-   ansible-playbook --private-key=/<PATH_TO_HOMEDIR>/.vagrant.d/insecure_private_key  playbook.yml --extra-vars "action=absent"
-   ( substitute  <PATH_TO_HOMEDIR> with appropriate path )
+   ansible-playbook --private-key=/PATH_TO_HOMEDIR/.vagrant.d/insecure_private_key  playbook.yml --extra-vars "action=absent"
+   ( substitute PATH_TO_HOMEDIR of private-key with appropriate path )
 
    OR
 
